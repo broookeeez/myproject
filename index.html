@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Kitty</title>
+    
+    <style>
+    	body {
+        	background-color: linen;
+        }
+        h1 {
+        	color: sienna;
+			font-size: 50px;
+            text-align: center;
+            font-style: italic;
+            transition: letter-spacing 1s;
+        }
+        
+        
+        h1:hover {
+        	letter-spacing: 10px;
+        }
+        p {
+        	text-align: center;
+            color: sienna;
+            font-size: 30px;
+            font-family: serif;
+            font-style: italic;
+        }
+        button {
+        	border: 2px solid sienna;
+            border-radius: 12px;
+            padding: 5px 30px;
+            background-color: linen;
+            color: sienna;
+            font-size: 20px;
+            font-style: italic;
+            font-family: serif;
+            display: block;
+            margin: auto;
+            cursor: pointer;
+            box-shadow: 2px 3px;
+            transition: letter-spacing 1s, padding 1s;
+            
+        }
+        button:hover {
+        	letter-spacing: 10px;
+            padding: 5px 20px 5px 30px;
+        }
+        button:active {
+        	box-shadow: 0 0;
+            transform: translateY(3px);
+        }
+        .image {
+        	position: relative;
+            margin: auto;
+        }
+        img {
+        	display: block;
+            margin: auto;
+			clip-path: ellipse(40% 50%);
+           
+        }
+        .overlay {
+        	position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            opacity: 0;
+            transition: 1s;
+            background-color: linen;
+            margin: auto;
+            clip-path: ellipse(15% 51%);
+        }
+        .overlay:hover {
+        	opacity: .75;
+        }
+        .text {
+        	text-align: center;
+            color: sienna;
+            padding: 180px 0;
+            font-size: 20px;
+            font-weight: bold;
+        }
+     
+      
+    </style>
+    
+    <script>
+    	
+        function nameKitty() {
+        	let names = ["Luna","Loki","Leo","Nala","Coco","Bella","Charlie","Milo","Simba","Lily","Pepper","Lola","Willow","Ziggy","Jasper","Max","Merlin","Oscar","Daisy","Molly","Mia","Kitty","Gus","Cleo","Romeo","Shadow","Poppy","Phoebe","Olive","Oliver","Lucy","Kiki","Teddy","Penny","Marley","Monty","Maya","Felix","Binx","Zeus","Winston","Theo","Tilly","Toby","Sassy","Smokey","Sebastian","Ruby","Sage","Suki"];
+        	let randomNum = Math.floor(Math.random() * names.length);
+        	document.getElementById("kittyName").innerText = names[randomNum];
+        }
+    </script>
+
+</head>
+
+<body>
+
+	<h1>kitty cat &#9825;</h1><br>
+    
+    <div class="image">
+   		<img src="https://i.redd.it/my-small-ragdoll-cat-luna-v0-h2f2kga1j4zd1.jpg?width=3024&format=pjpg&auto=webp&s=7d425c76fff821ebdfd5c0fdd750f8402c4c2530" alt="kitty" width="300">
+        <div class="overlay">
+        	<div class="text">meow</div>
+        </div>
+    </div>
+    
+    <p id ="kittyName">&#9825; &#9825; &#9825;</p>
+    <button type="button" onclick="nameKitty()">name</button>
+
+    
+    
+    
+	
+
+</body>
+</html>
