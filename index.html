@@ -2,18 +2,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Kitty</title>
-    
+
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" 
+    rel="stylesheet" 
+    integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" 
+    crossorigin="anonymous">
+
+    <!--CSS-->
     <style>
     	body {
-        	background-color: linen;
+        	background-color: #F8F5F3;
         }
         h1 {
-        	color: sienna;
+        	color: #977059;
 			font-size: 50px;
             text-align: center;
             font-style: italic;
             transition: letter-spacing 1s;
+            font-family: serif;
         }
         
         
@@ -22,24 +32,26 @@
         }
         p {
         	text-align: center;
-            color: sienna;
+            color: #977059;
             font-size: 30px;
             font-family: serif;
             font-style: italic;
+            
         }
         button {
-        	border: 2px solid sienna;
+        	border: 2px solid #977059;
             border-radius: 12px;
             padding: 5px 30px;
-            background-color: linen;
-            color: sienna;
+            background-color: #C2A897;
+            color: #977059;
             font-size: 20px;
             font-style: italic;
+            font-weight: bold;
             font-family: serif;
             display: block;
             margin: auto;
             cursor: pointer;
-            box-shadow: 2px 3px;
+            box-shadow: 2px 3px #977059;
             transition: letter-spacing 1s, padding 1s;
             
         }
@@ -69,7 +81,7 @@
             right: 0;
             opacity: 0;
             transition: 1s;
-            background-color: linen;
+            background-color: #F8F5F3;
             margin: auto;
             clip-path: ellipse(15% 51%);
         }
@@ -78,17 +90,18 @@
         }
         .text {
         	text-align: center;
-            color: sienna;
+            color: #977059;
             padding: 180px 0;
             font-size: 20px;
             font-weight: bold;
+            font-family: serif;
         }
      
       
     </style>
-    
+
+    <!--JS-->
     <script>
-    	
         function nameKitty() {
         	let names = ["Luna","Loki","Leo","Nala","Coco","Bella","Charlie","Milo","Simba","Lily","Pepper","Lola","Willow","Ziggy","Jasper","Max","Merlin","Oscar","Daisy","Molly","Mia","Kitty","Gus","Cleo","Romeo","Shadow","Poppy","Phoebe","Olive","Oliver","Lucy","Kiki","Teddy","Penny","Marley","Monty","Maya","Felix","Binx","Zeus","Winston","Theo","Tilly","Toby","Sassy","Smokey","Sebastian","Ruby","Sage","Suki"];
         	let randomNum = Math.floor(Math.random() * names.length);
@@ -98,9 +111,10 @@
 
 </head>
 
+<!--Body-->
 <body>
 
-	<h1>kitty cat &#9825;</h1><br>
+	<br><h1>kitty cat &#9825;</h1><br>
     
     <div class="image">
    		<img src="https://i.redd.it/my-small-ragdoll-cat-luna-v0-h2f2kga1j4zd1.jpg?width=3024&format=pjpg&auto=webp&s=7d425c76fff821ebdfd5c0fdd750f8402c4c2530" alt="kitty" width="300">
@@ -108,6 +122,7 @@
         	<div class="text">meow</div>
         </div>
     </div>
+    <br>
     
     <p id ="kittyName">&#9825; &#9825; &#9825;</p>
     <button type="button" onclick="nameKitty()">name</button>
@@ -116,6 +131,9 @@
     
     
 	
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" 
+    crossorigin="anonymous"></script>
 </body>
 </html>
+
